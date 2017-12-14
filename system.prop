@@ -41,6 +41,9 @@ ro.qualcomm.bluetooth.nap=true
 ro.bluetooth.dun=true
 ro.qualcomm.bluetooth.map=true
 
+# Camera
+camera.aux.packagelist=co.paranoidandroid.camera
+
 # Display
 ro.sf.lcd_density=240
 ro.hdmi.enable=true

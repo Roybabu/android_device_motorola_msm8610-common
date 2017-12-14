@@ -95,17 +95,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
-
-
-
-
-
-
-
-
-
-
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
@@ -121,7 +110,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8610 \
     libshim_qcopt \
-    Snap
 
 # IPC router config
 PRODUCT_COPY_FILES += \
