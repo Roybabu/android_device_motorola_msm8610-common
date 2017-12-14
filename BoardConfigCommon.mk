@@ -47,7 +47,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 vmalloc=400M
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 vmalloc=400M androidboot.selinux=permissive
 LZMA_RAMDISK_TARGETS := recovery
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
@@ -57,7 +57,7 @@ TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -99,7 +99,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 MALLOC_SVELTE := true
 
 # Qualcomm support
-BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := false
 TARGET_RIL_VARIANT := caf
 
 # Recovery
@@ -108,12 +108,15 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 HAVE_SELINUX := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/Android.mk
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Storage & partiiton
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+#CAMERA
+TARGET_USES_AOSP_CAMERA := true
 
 # Vold
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
