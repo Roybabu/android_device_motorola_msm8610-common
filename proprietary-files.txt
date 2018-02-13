@@ -59,6 +59,7 @@ vendor/lib/libnetmgr.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAmrwbplusDec.so
+-vendor/lib/libaudioalsa.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
